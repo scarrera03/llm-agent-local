@@ -1,4 +1,4 @@
-<img width="1437" height="900" alt="image" src="https://github.com/user-attachments/assets/f3032603-462b-4075-972c-056da58fb3d9" /># 🤖 Local LLM Agent with LM Studio & DuckDuckGo Search
+# 🤖 Local LLM Agent with LM Studio & DuckDuckGo Search
 
 This project showcases a lightweight, local-first reasoning agent that interacts with a Large Language Model (LLM) running in LM Studio, with optional real-time web search capabilities powered by DuckDuckGo.
 
