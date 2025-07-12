@@ -61,13 +61,11 @@ Final Answer: Tokyo.
 
 ## Dependencies
 
-requests
-
-duckduckgo_search
-
-re
-
-time
+- requests
+- duckduckgo_search
+- re
+- time
+  
 You can install everything with:
 
 ```bash
