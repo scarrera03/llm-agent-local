@@ -3,31 +3,31 @@ import re
 import time
 from duckduckgo_search import DDGS
 
-# === CONFIGURACIÓN ===
+# === CONFIGURATION ===
 LM_STUDIO_URL = "http://localhost:1234/v1/chat/completions"
-MODEL_NAME = "mistral"  # LM Studio puede ignorar esto si solo hay un modelo cargado
+MODEL_NAME = "mistral"  # LM Studio may ignore this if only one model is loaded
 TEMPERATURE = 0.7
 
-# === FUNCIONES DE UTILIDAD ===
+# === UTILITY FUNCTIONS ===
 
 def call_llm(messages):
     response = requests.post(
         LM_STUDIO_URL,
         headers={"Content-Type": "application/json"},
         json={
-            "model": "mistral-7b-instruct-v0.1.Q4_0",  # Asegurate de usar el nombre exacto
+            "model": "mistral-7b-instruct-v0.1.Q4_0",  # Make sure to use the exact model name
             "messages": messages,
-            "temperature": 0.7,
+            "temperature": TEMPERATURE,
         },
     )
     
     data = response.json()
     
-    # ✅ Manejo claro de errores
+    # Clear error handling
     if "choices" not in data:
-        print("⚠️ Error en la respuesta del modelo:")
+        print("⚠️ Error in model response:")
         print(data)
-        return "❌ No se encontró el contenido en la respuesta"
+        return "Content not found in the response"
 
     return data["choices"][0]["message"]["content"]
 
@@ -44,13 +44,13 @@ def extract_action(response):
 def is_final_answer(response):
     return "Final Answer" in response
 
-# === AGENTE PRINCIPAL ===
+# === MAIN AGENT ===
 
 def run_agent(task):
-    messages = [{"role": "user", "content": "You are an intelligent agent. Use Thought, Action, Observation, and Final Answer to solve:\\n" + task}]
+    messages = [{"role": "user", "content": "You are an intelligent agent. Use Thought, Action, Observation, and Final Answer to solve:\n" + task}]
     print(f"Task: {task}\n")
 
-    for step in range(5):  # máximo 5 ciclos
+    for step in range(5):  # maximum 5 cycles
         response = call_llm(messages)
         print(response)
         messages.append({"role": "assistant", "content": response})
@@ -69,5 +69,5 @@ def run_agent(task):
         time.sleep(1)
 
 if __name__ == "__main__":
-    pregunta = input("Escribí tu pregunta para el agente: ")
-    run_agent(pregunta)
+    question = input("Type your question for the agent: ")
+    run_agent(question)
