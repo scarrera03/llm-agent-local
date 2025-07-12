@@ -1,14 +1,17 @@
 # 🤖 Local LLM Agent with LM Studio & DuckDuckGo Search
 
-This project showcases a lightweight, local-first reasoning agent that interacts with a Large Language Model (LLM) running in LM Studio, with optional real-time web search capabilities powered by DuckDuckGo.
+This project showcases a lightweight, local-first reasoning agent that interacts with a Large Language Model (LLM) running in LM Studio, with optional real-time web search capabilities powered by DuckDuckGo. It also demonstrates how to run a local LLM agent using the mistral-7b-instruct model through LM Studio.
 
 It implements a reasoning loop inspired by the ReAct framework (Reasoning + Acting), allowing the agent to iteratively think, act (e.g., search), and refine its answers.
 
 This is a personal implementation based on concepts introduced by OpenAI and GopenAI’s LLM Agent framework. It runs entirely offline using Mistral-7B in LM Studio and supports live web search integration via DuckDuckGo when needed.
 
 ---
+## Setup
 
-
+- Model used: `TheBloke/Mistral-7B-Instruct-v0.1-GGUF`
+- Interface: LM Studio
+- Running locally on: `http://127.0.0.1:1234`
 
 ## Project Structure
 
@@ -47,6 +50,8 @@ LLM-Agents-Local/
 This script demonstrates a simple reasoning agent using local LLM inference with LM Studio and DuckDuckGo Search for action-observation loops.
 
 ## How it works
+
+The `agent.py` script sends a prompt to the locally running model using the OpenAI-compatible API and prints the response.
 
 The agent follows a reasoning pattern with the following steps:
 
