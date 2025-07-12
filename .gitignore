@@ -1,3 +1,46 @@
+# ===========================================
+# Python & virtual environment
+# ===========================================
+venv/                 # Local virtual environment
+*.pyc                 # Compiled Python files
+__pycache__/          # Python bytecode cache
+
+# ===========================================
+# Operating system files
+# ===========================================
+.DS_Store             # macOS system file
+Thumbs.db             # Windows system file
+
+# ===========================================
+# Editor configuration files
+# ===========================================
+.vscode/              # Visual Studio Code settings
+*.code-workspace      # VS Code workspace files
+
+# ===========================================
+# Logs and execution outputs
+# ===========================================
+*.log                 # Log files
+*.out                 # Output files
+
+# ===========================================
+# Model files and cache (optional)
+# ===========================================
+models/               # Folder for downloaded models
+*.gguf                # Model format used in LM Studio
+*.bin                 # Other binary model files
+
+# ===========================================
+# Jupyter Notebooks (if used)
+# ===========================================
+.ipynb_checkpoints/   # Automatic checkpoint files
+
+# ===========================================
+# Miscellaneous (based on tools used)
+# ===========================================
+.env                  # Environment variables file (if using dotenv)
 venv/
 *.pyc
 __pycache__/
+
+
