@@ -6,6 +6,7 @@ This project showcases a simple, local-first reasoning agent that interacts with
 
 ## Project Structure
 
+```
 LLM-Agents-Local/
 ├── agent.py # Main script for interacting with the local LLM
 ├── README.md # This file
@@ -13,7 +14,7 @@ LLM-Agents-Local/
 └── screenshots/ # Screenshots for documentation/demo
     ├── lmstudio_loaded.png
     ├── terminal_success.png
-
+```
 
 ---
 
@@ -27,7 +28,7 @@ LLM-Agents-Local/
 
 ---
 
-## ▶️ How to Run
+## How to Run
 
 1. **Install Python dependencies:**
 
@@ -58,7 +59,7 @@ Observation: The capital of Japan is Tokyo.
 Final Answer: Tokyo.
 ```
 
-# Dependencies
+## Dependencies
 
 requests
 
@@ -72,12 +73,12 @@ You can install everything with:
 ```bash
 pip install -r requirements.txt
 ```
-# Screenshots
+## Screenshots
 
 | LM Studio Loaded                     | Terminal Output                       |
 | ------------------------------------ | ------------------------------------- |
 | ![](screenshots/lmstudio_loaded.png) | ![](screenshots/terminal_success.png) |
 
 
-# License
+## License
 This project is open source and free to use for learning or prototyping purposes.
